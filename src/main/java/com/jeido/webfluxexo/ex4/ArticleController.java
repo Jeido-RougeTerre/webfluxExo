@@ -12,11 +12,11 @@ import java.util.UUID;
 public class ArticleController {
 
     @GetMapping
-    public Flux<String> getArticles() {
+    public Flux<String> getAllArticleTitles() {
         return Flux.just(
-                new Articles(UUID.randomUUID(), "Introduction to Spring WebFlux"),
-                new Articles(UUID.randomUUID(), "Reactive Programming with Project Reactor"),
-                new Articles(UUID.randomUUID(), "Building APIs with Spring Boot")
-        ).map(Articles::getTitle);
+                new Article(UUID.randomUUID(), "Introduction to Spring WebFlux"),
+                new Article(UUID.randomUUID(), "Reactive Programming with Project Reactor"),
+                new Article(UUID.randomUUID(), "Building APIs with Spring Boot")
+        ).map(Article::getTitle);
     }
 }

@@ -2,11 +2,11 @@ package com.jeido.webfluxexo.ex4;
 
 import java.util.UUID;
 
-public class Articles {
+public class Article {
     private UUID id;
     private String title;
 
-    public Articles(UUID id, String title) {
+    public Article(UUID id, String title) {
         this.id = id;
         this.title = title;
     }
